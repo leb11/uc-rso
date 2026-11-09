@@ -1,0 +1,37 @@
+[
+ {
+  "id": "p1",
+  "img": "images/calamit.jpg",
+  "t": "CALAMI-T",
+  "k": "Completed",
+  "s": "Landslide monitoring toolbox with sensors, mobile alerts, and an early-warning dashboard for six BLISTT sites."
+ },
+ {
+  "id": "p2",
+  "img": "images/danum.jpg",
+  "t": "Project Danum",
+  "k": "Ongoing",
+  "s": "Decision support for protecting Cordillera rivers and watersheds."
+ },
+ {
+  "id": "p3",
+  "img": "images/boondock.jpg",
+  "t": "Program Boondock",
+  "k": "Ongoing",
+  "s": "Upland water security and engineering for mountain communities."
+ },
+ {
+  "id": "p4",
+  "img": "images/dengue.jpg",
+  "t": "Dengue GIS Analysis",
+  "k": "Completed",
+  "s": "Mapping dengue cases in Baguio City against housing, heat, and population data."
+ },
+ {
+  "id": "p5",
+  "img": "images/mgeo.jpg",
+  "t": "MGeoDRR",
+  "k": "Ongoing",
+  "s": "Master’s in Geomatics for Disaster Risk Reduction, co-developed through Erasmus+."
+ }
+]

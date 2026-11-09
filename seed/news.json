@@ -1,0 +1,26 @@
+[
+  {
+    "id": "n1",
+    "img": "images/news_calamit.jpg",
+    "t": "CALAMI-T team in the field",
+    "k": "Participated",
+    "d": "",
+    "s": "Sample post. Log in to the staff page to replace it."
+  },
+  {
+    "id": "n2",
+    "img": "images/news_boon.jpg",
+    "t": "Benchmarking cable irrigation systems in Tublay",
+    "k": "Participated",
+    "d": "",
+    "s": "Sample post. Log in to the staff page to replace it."
+  },
+  {
+    "id": "n3",
+    "img": "",
+    "t": "Welcoming UCians at Freshies Day",
+    "k": "Hosted",
+    "d": "",
+    "s": "Sample post. Log in to the staff page to replace it."
+  }
+]

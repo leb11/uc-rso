@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UC-RSO · Research Services Office</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header><div class="wrap bar">
+ <a class="brand" href="#home"><img class="logo" src="images/logo.png" alt="University of the Cordilleras logo"><span>UC-RSO</span></a>
+ <button id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+ <nav id="nav" aria-label="Main">
+  <a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#news">News</a><a href="#gallery">Gallery</a><a href="#partners">Partners</a><a href="#contact">Contact</a><a href="#dashboard">Dashboard</a>
+ </nav></div></header>
+
+<main id="home">
+<div class="hero"><div class="wrap">
+ <div class="eyebrow" style="color:var(--gold)">University of the Cordilleras · Research Services Office</div>
+ <h1 data-site="heroTitle">Turning research into safer, stronger communities.</h1>
+ <p data-site="heroText">We help faculty, students, and partners plan, fund, analyze, and share research, from the first idea to published results.</p>
+ <a class="btn" href="#contact">Talk to us</a><a class="btn o" href="#projects">See our projects</a>
+</div></div>
+<div class="wrap stats" aria-label="At a glance">
+ <div class="stat"><b id="s1">0</b><span>Ongoing projects</span></div>
+ <div class="stat"><b id="s2">0</b><span>Completed projects</span></div>
+ <div class="stat"><b id="s3">0</b><span>News and events</span></div>
+ <div class="stat"><b id="s4">0</b><span>Partners</span></div>
+</div>
+
+<section id="about"><div class="wrap cols">
+ <div><div class="eyebrow">About us</div><h2>Research with a purpose</h2>
+ <p class="lead" style="margin:0">UC-RSO supports research that protects lives, water, health, and livelihoods in the Cordillera. We guide researchers, run GIS and statistical work, and connect projects with funding and partners.</p></div>
+ <div class="card"><h3>What guides us</h3><p>Useful research. Community safety. Open collaboration. Capacity building for every UCian researcher.</p></div>
+</div></section>
+
+<section id="watch"><div class="wrap"><div class="eyebrow">Watch</div><h2>UC-RSO at a glance</h2>
+ <p class="lead">A one-minute look at our work, from landslide monitoring to watersheds and GIS research.</p>
+ <video controls preload="metadata" poster="images/poster.jpg" src="video/teaser.mp4">Your browser can’t play this video.</video></div></section>
+
+<section id="services" class="alt"><div class="wrap">
+ <div class="eyebrow">Services</div><h2>How we can help</h2><p class="lead">Six services, one office. Not sure which you need? Send us a message.</p>
+ <div class="grid" id="svc"></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+ <div class="eyebrow">Projects</div><h2>What we are working on</h2>
+ <div class="tabs" role="group" aria-label="Filter projects">
+  <button class="tab" data-f="all" aria-pressed="true">All</button><button class="tab" data-f="Ongoing" aria-pressed="false">Ongoing</button><button class="tab" data-f="Completed" aria-pressed="false">Completed</button>
+ </div>
+ <div class="grid" id="proj"></div>
+</div></section>
+
+<section id="news" class="alt"><div class="wrap">
+ <div class="eyebrow">News and events</div><h2>What’s happening</h2><p class="lead">Events we hosted, attended, or took part in.</p>
+ <div class="grid" id="newsList"></div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+ <div class="eyebrow">Gallery</div><h2>In the field</h2><p class="lead">Moments from our fieldwork and project visits.</p>
+ <div class="gal" id="gal"></div></div></section>
+
+<section id="partners"><div class="wrap">
+ <div class="eyebrow">Partners</div><h2>Who we work with</h2><p class="lead">Research is stronger together.</p>
+ <div class="partners" id="part"></div>
+</div></section>
+
+<section id="contact" class="alt"><div class="wrap cols">
+ <div><div class="eyebrow">Contact us</div><h2>Send us a message</h2>
+ <form id="cf" novalidate>
+  <label>Full name<input name="name" required autocomplete="name"></label>
+  <label>Email<input name="email" type="email" required autocomplete="email"></label>
+  <label>I need help with<select name="subject"><option>Research consultation</option><option>GIS services</option><option>Statistical consulting</option><option>Proposal review</option><option>Research subsidy</option><option>Other</option></select></label>
+  <label>Message<textarea name="msg" rows="4" required></textarea></label>
+  <button class="btn" type="submit">Send message</button><p class="note" id="cmsg" role="status"></p>
+ </form></div>
+ <div class="card"><h3>Visit or call</h3>
+  <p><b>Phone</b><br><span data-site="phone">+63 74 442 3316, local 195 or 136</span></p><br>
+  <p><b>Email</b><br><a data-site="email" data-mail href="mailto:rso@uc-bcf.edu.ph">rso@uc-bcf.edu.ph</a></p><br>
+  <p><b>Main office</b><br><span data-site="office">Room S314, University of the Cordilleras Main</span></p><br>
+  <p><b>GIS Innovation Laboratory</b><br><span data-site="lab">L22, UC Legarda Office</span></p></div>
+</div></section>
+
+<section id="dashboard"><div class="wrap">
+ <div class="eyebrow">Dashboard</div><h2>Office at a glance</h2>
+ <div class="card"><div class="bars" id="bars"></div></div>
+ <p class="note"><a href="admin.html">Staff login</a>: post news, add projects, and read messages from the contact form.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap"><img class="flogo" src="images/logo.png" alt="">© University of the Cordilleras · Research Services Office<br><span data-site="address">Governor Pack Rd, Baguio City</span></div></footer>
+<div class="fab"><button id="up" aria-label="Back to top">↑</button><button id="dn" aria-label="Go to bottom">↓</button></div>
+
+<script src="js/main.js"></script>
+</body></html>

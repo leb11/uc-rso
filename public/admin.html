@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" href="images/favicon.png"><title>Staff area · UC-RSO</title><meta name="robots" content="noindex">
+<link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header><div class="wrap bar"><a class="brand" href="index.html"><img class="logo" src="images/logo.png" alt="University of the Cordilleras logo"><span>UC-RSO staff</span></a><a href="index.html" style="color:#fff">Back to website</a></div></header>
+<main class="wrap">
+ <div id="login" class="login card"><h2>Staff login</h2>
+  <form id="lf"><label>Password<input type="password" id="pw" required autocomplete="current-password"></label>
+  <button class="btn" type="submit">Log in</button><p class="err" id="lerr" role="alert"></p></form></div>
+ <div id="panel" hidden style="padding:30px 0 60px">
+  <h2>Staff dashboard</h2><p class="note" id="status" role="status"></p>
+  <div class="cols">
+   <div class="card"><h3>Post news or an event</h3><form id="nf">
+    <label>Title<input name="t" required></label>
+    <label>Type<select name="k"><option>Hosted</option><option>Attended</option><option>Participated</option></select></label>
+    <label>Date<input name="d" type="date"></label>
+    <label>Summary<textarea name="s" rows="3" required></textarea></label>
+    <label>Photo (optional, up to 4 MB)<input name="image" type="file" accept="image/jpeg,image/png,image/webp"></label>
+    <button class="btn" type="submit">Publish news</button></form></div>
+   <div class="card"><h3>Add a project</h3><form id="pf">
+    <label>Project name<input name="t" required></label>
+    <label>Status<select name="k"><option>Ongoing</option><option>Completed</option></select></label>
+    <label>Short description<textarea name="s" rows="3" required></textarea></label>
+    <label>Cover photo (optional, up to 4 MB)<input name="image" type="file" accept="image/jpeg,image/png,image/webp"></label>
+    <button class="btn" type="submit">Add project</button></form></div>
+  </div>
+  <div class="cols" style="margin-top:20px">
+   <div class="card"><h3>News posts</h3><div id="nl"></div></div>
+   <div class="card"><h3>Projects</h3><div id="pl"></div></div>
+  </div>
+  <div class="card" style="margin-top:20px"><h3>Messages from the contact form</h3><div id="inbox"></div></div>
+ </div>
+</main>
+<script src="js/admin.js"></script>
+</body></html>
