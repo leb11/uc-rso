@@ -43,7 +43,7 @@ You only need **VS Code** and the project folder. Never edit files you do not re
 |---|---|---|
 | Phone, email, office, address, headline | `public/data/site.json` | Edit the text between the quotes |
 | The six services | `public/data/services.json` | Edit `title` and `text`. Keep the commas and quotes |
-| Partners list | `public/data/partners.json` | Add a line like `"New Partner Name",` |
+| Partners list | Staff page (`admin.html`) | Log in, then use the Partners section to add or remove a name. |
 | Gallery photos | `public/data/gallery.json` | Copy the photo into `public/images/`, then add `{"image": "myphoto.jpg", "caption": "What it shows"}` |
 | Logo | `public/images/logo.png` | Replace the file, keeping the same name |
 | Video | `public/video/teaser.mp4` | Replace the file, keeping the same name |
@@ -60,7 +60,7 @@ You only need **VS Code** and the project folder. Never edit files you do not re
 - Needs **Node.js 20+**. Start with `npm start`, or run it as a service (PM2 or a Windows service) so it restarts after a reboot.
 - Set `ADMIN_PASSWORD` in `.env`. Put the site behind **HTTPS** (nginx, IIS, or similar). Set `PORT` if 3000 is taken.
 - To send staff replies from the site, ask UC IT for an approved SMTP relay or office-mailbox app password and set `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASSWORD`, and `MAIL_FROM` in `.env`. Never use a visitor's email password; visitors only need to enter an email address where they can receive a reply.
-- **Back up** the `data/` folder and `public/images/uploads/` regularly. They hold the live news, projects, messages, and uploaded photos.
+- **Back up** the `data/` folder and `public/images/uploads/` regularly. They hold the live news, projects, partners, messages, and uploaded photos.
 - To update the site: `git pull`, then restart the server. Live content is not stored in git, so updates never erase news or messages.
 - Staff share one password. Separate logins and email notifications for new messages can be added later.
 

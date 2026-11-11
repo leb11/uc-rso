@@ -83,6 +83,11 @@ video{width:100%;max-width:860px;border-radius:14px;background:#000;display:bloc
 .sent-reply{border-left:3px solid var(--g2);padding:10px 14px;margin:12px 0;background:color-mix(in srgb,var(--g2) 7%,var(--card))}
 .sent-reply p{white-space:pre-wrap;overflow-wrap:anywhere;margin:6px 0 0}
 .reply-form{max-width:760px;margin-top:16px}.form-hint{font-weight:400;color:var(--mu);font-size:13px}
+.partner-add{grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:12px;margin:16px 0}
+.partner-admin-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0 20px}
+.partner-admin-row{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--ln);padding:10px 0}
+.partner-admin-row .del{float:none;flex:none}
 .btn.s{background:var(--g2);color:#fff}
+@media(max-width:520px){.partner-add{grid-template-columns:1fr}.partner-add .btn{width:100%}}
 .brand .logo{height:46px;width:auto;background:#fff;border-radius:12px;padding:3px}
 .flogo{height:70px;width:auto;background:#fff;border-radius:14px;padding:5px;margin-bottom:12px}

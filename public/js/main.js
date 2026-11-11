@@ -35,7 +35,7 @@ $('#cf').onsubmit = async e => {
   }
 };
 render();
-Promise.all([load('/api/projects', null), load('/api/news', null), load('data/services.json', []), load('data/partners.json', []), load('data/gallery.json', []), load('data/site.json', {})]).then(([p, n, sv, pa, ga, si]) => {
+Promise.all([load('/api/projects', null), load('/api/news', null), load('data/services.json', []), load('/api/partners', []), load('data/gallery.json', []), load('data/site.json', {})]).then(([p, n, sv, pa, ga, si]) => {
   projects = p || []; news = n || []; SVC = sv; PART = pa; GAL = ga; applySite(si); render();
   if (p === null || n === null) $('#newsList').innerHTML = '<p class="note">News and projects could not be loaded. The website server may not be running.</p>';
 });

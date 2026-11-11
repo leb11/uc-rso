@@ -14,10 +14,10 @@ Website of the University of the Cordilleras Research Services Office: projects,
 ## Folder map
 | Path | What it is |
 |---|---|
-| `server.js` | The small program that runs the site and saves news, projects, and messages |
+| `server.js` | The small program that runs the site and saves news, projects, partners, and messages |
 | `public/index.html` | The home page |
 | `public/admin.html` | The staff page |
-| `public/data/*.json` | Services, partners, gallery, and contact details (easy to edit) |
+| `public/data/*.json` | Services, gallery, and contact details (easy to edit) |
 | `public/images/`, `public/video/` | Photos, logo, and video |
-| `seed/` | The starting news and projects |
-| `data/` | Live news, projects, and messages (created on first run, not stored in git) |
+| `seed/` | The starting news, projects, and partners |
+| `data/` | Live news, projects, partners, and messages (created on first run, not stored in git) |

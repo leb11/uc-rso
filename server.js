@@ -12,9 +12,9 @@ const SMTP_PASSWORD = process.env.SMTP_PASSWORD || '';
 const MAIL_FROM = process.env.MAIL_FROM || SMTP_USER;
 const PUB = path.join(__dirname, 'public');
 const DATA = path.join(__dirname, 'data');   // live content: news, projects, messages (not stored in git)
-const F = { news: path.join(DATA, 'news.json'), projects: path.join(DATA, 'projects.json'), messages: path.join(DATA, 'messages.json') };
+const F = { news: path.join(DATA, 'news.json'), projects: path.join(DATA, 'projects.json'), messages: path.join(DATA, 'messages.json'), partners: path.join(DATA, 'partners.json') };
 fs.mkdirSync(DATA, { recursive: true });
-for (const k of ['news', 'projects']) if (!fs.existsSync(F[k])) fs.copyFileSync(path.join(__dirname, 'seed', k + '.json'), F[k]);
+for (const k of ['news', 'projects', 'partners']) if (!fs.existsSync(F[k])) fs.copyFileSync(path.join(__dirname, 'seed', k + '.json'), F[k]);
 const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp', '.mp4': 'video/mp4', '.svg': 'image/svg+xml', '.ico': 'image/x-icon' };
 const tokens = new Set(), tries = {};
 const read = f => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return []; } };
@@ -70,6 +70,22 @@ async function api(req, res, url) {
       return json(res, 200, { ok: true, reply: sentReply });
     }
     if (kind === 'messages' && m === 'GET') return authed(req) ? json(res, 200, read(F.messages)) : json(res, 401, { error: 'Log in first.' });
+    if (kind === 'partners') {
+      if (m === 'GET') return json(res, 200, read(F.partners));
+      if (!authed(req)) return json(res, 401, { error: 'Log in first.' });
+      const all = read(F.partners);
+      if (m === 'POST') {
+        const b = await body(req), name = clean(b.name, 120);
+        if (!name) return json(res, 400, { error: 'Enter a partner name.' });
+        if (all.some(partner => partner.toLowerCase() === name.toLowerCase())) return json(res, 409, { error: 'That partner is already listed.' });
+        all.push(name); write(F.partners, all); return json(res, 201, { name });
+      }
+      if (m === 'DELETE') {
+        const index = Number(id);
+        if (!Number.isInteger(index) || index < 0 || index >= all.length) return json(res, 404, { error: 'Partner not found.' });
+        const [partner] = all.splice(index, 1); write(F.partners, all); return json(res, 200, { ok: true, partner });
+      }
+    }
     if (kind === 'news' || kind === 'projects') {
       if (m === 'GET') return json(res, 200, read(F[kind]));
       if (!authed(req)) return json(res, 401, { error: 'Log in first.' });
