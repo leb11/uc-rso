@@ -1,1 +1,14 @@
-{ "name": "uc-rso-website", "version": "1.0.0", "description": "UC Research Services Office website", "scripts": { "start": "node server.js" }, "engines": { "node": ">=18" } }
+{
+	"name": "uc-rso-website",
+	"version": "1.0.0",
+	"description": "UC Research Services Office website",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"dependencies": {
+		"nodemailer": "^10.5.0"
+	}
+}

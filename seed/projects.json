@@ -4,21 +4,21 @@
   "img": "images/calamit.jpg",
   "t": "CALAMI-T",
   "k": "Completed",
-  "s": "Landslide monitoring toolbox with sensors, mobile alerts, and an early-warning dashboard for six BLISTT sites."
+   "s": "Part of MULAT BLISTT, this project develops a toolbox to monitor active and future landslides, establish soil-moisture thresholds, and support web- and SMS-based warnings and evacuation routing with UC, UP Baguio, University of Baguio, and local governments."
  },
  {
   "id": "p2",
   "img": "images/danum.jpg",
   "t": "Project Danum",
   "k": "Ongoing",
-  "s": "Decision support for protecting Cordillera rivers and watersheds."
+   "s": "Part of the BOONDOCK program, DANUM develops technology-enhanced decision-support tools for water security and disaster resilience in indigenous communities."
  },
  {
   "id": "p3",
   "img": "images/boondock.jpg",
   "t": "Program Boondock",
   "k": "Ongoing",
-  "s": "Upland water security and engineering for mountain communities."
+   "s": "BOONDOCK Project 3 assesses and manages upland rivers and springs, supporting water security and mountain engineering in areas including the Chico River Basin, Bontoc, and Tabuk."
  },
  {
   "id": "p4",
@@ -30,8 +30,26 @@
  {
   "id": "p5",
   "img": "images/mgeo.jpg",
-  "t": "MGeoDRR",
-  "k": "Ongoing",
-  "s": "Master’s in Geomatics for Disaster Risk Reduction, co-developed through Erasmus+."
+   "t": "MS GeoDRR (Erasmus+)",
+   "k": "Completed",
+   "s": "A 2021-2024 capacity-building project coordinated by Silesian University of Technology, with UC as a beneficiary, strengthening geomatics and disaster-risk-reduction teaching and research."
+ },
+ {
+   "id": "p6",
+   "t": "DIGIHAZ",
+   "k": "Ongoing",
+   "s": "An EU-ASEAN SCOPE-HE project supporting Philippine and Malaysian higher-education institutions in developing doctoral education on digital transformation for natural hazards, including AI, machine learning, and IoT."
+ },
+ {
+   "id": "p7",
+   "t": "Project GODDESS / G4RS",
+   "k": "Completed",
+   "s": "GIS and data analysis of road-safety risks in Baguio City. The project identified accident hotspots and time patterns and recommended targeted intersection redesign, improved street lighting, and traffic staffing."
+ },
+ {
+   "id": "p8",
+   "t": "Dalan ni Taltallak",
+   "k": "Ongoing",
+   "s": "A partnership among the City Government of Baguio, UC, SLU, UB, and the Department of Transportation to support research on low-carbon and alternative transportation networks."
  }
 ]

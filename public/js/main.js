@@ -15,9 +15,8 @@ function render() {
   const list = projects.filter(p => filt == 'all' || p.k == filt);
   $('#proj').innerHTML = list.length ? list.map(p => `<div class="card ${p.img ? 'm' : ''}">${p.img ? `<img class="cover" src="${esc(p.img)}" alt="${esc(p.t)}">` : ''}<div><span class="tag ${p.k == 'Completed' ? 'c' : ''}">${esc(p.k)}</span><h3>${esc(p.t)}</h3><p>${esc(p.s)}</p></div></div>`).join('') : '<p class="note">No projects in this group yet.</p>';
   $('#newsList').innerHTML = news.length ? news.map(n => `<div class="card ${n.img ? 'm' : ''}">${n.img ? `<img class="cover" src="${esc(n.img)}" alt="${esc(n.t)}">` : ''}<div><span class="tag">${esc(n.k)}</span><h3>${esc(n.t)}</h3><p>${esc(n.d)}${n.d ? ' · ' : ''}${esc(n.s)}</p></div></div>`).join('') : '<p class="note">No news yet. Check back soon.</p>';
-  const o = projects.filter(p => p.k == 'Ongoing').length, c = projects.length - o, m = Math.max(o, c, news.length, 1);
+  const o = projects.filter(p => p.k == 'Ongoing').length, c = projects.length - o;
   $('#s1').textContent = o; $('#s2').textContent = c; $('#s3').textContent = news.length; $('#s4').textContent = PART.length;
-  $('#bars').innerHTML = [['Ongoing', o], ['Completed', c], ['News posts', news.length]].map(r => `<div class="row"><span>${r[0]}</span><i style="width:${r[1] / m * 100}%"></i><b>${r[1]}</b></div>`).join('');
 }
 document.querySelectorAll('.tab').forEach(b => b.onclick = () => { filt = b.dataset.f; document.querySelectorAll('.tab').forEach(x => x.setAttribute('aria-pressed', x == b)); render(); });
 $('#menu').onclick = () => { const o = $('#nav').classList.toggle('open'); $('#menu').setAttribute('aria-expanded', o); };

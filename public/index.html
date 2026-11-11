@@ -9,7 +9,7 @@
  <a class="brand" href="#home"><img class="logo" src="images/logo.png" alt="University of the Cordilleras logo"><span>UC-RSO</span></a>
  <button id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
  <nav id="nav" aria-label="Main">
-  <a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#news">News</a><a href="#gallery">Gallery</a><a href="#partners">Partners</a><a href="#contact">Contact</a><a href="#dashboard">Dashboard</a>
+  <a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#news">News</a><a href="#gallery">Gallery</a><a href="#partners">Partners</a><a href="#contact">Contact</a><a href="#dashboard">Staff login</a>
  </nav></div></header>
 
 <main id="home">
@@ -67,7 +67,7 @@
  <div><div class="eyebrow">Contact us</div><h2>Send us a message</h2>
  <form id="cf" novalidate>
   <label>Full name<input name="name" required autocomplete="name"></label>
-  <label>Email<input name="email" type="email" required autocomplete="email"></label>
+  <label>Email<input name="email" type="email" required autocomplete="email"><small class="form-hint">Enter an address where we can reply. You do not need to sign in.</small></label>
   <label>I need help with<select name="subject"><option>Research consultation</option><option>GIS services</option><option>Statistical consulting</option><option>Proposal review</option><option>Research subsidy</option><option>Other</option></select></label>
   <label>Message<textarea name="msg" rows="4" required></textarea></label>
   <button class="btn" type="submit">Send message</button><p class="note" id="cmsg" role="status"></p>
@@ -79,10 +79,10 @@
   <p><b>GIS Innovation Laboratory</b><br><span data-site="lab">L22, UC Legarda Office</span></p></div>
 </div></section>
 
-<section id="dashboard"><div class="wrap">
- <div class="eyebrow">Dashboard</div><h2>Office at a glance</h2>
- <div class="card"><div class="bars" id="bars"></div></div>
- <p class="note"><a href="admin.html">Staff login</a>: post news, add projects, and read messages from the contact form.</p>
+<section id="dashboard" class="staff-area"><div class="wrap">
+ <div class="eyebrow">Staff access</div><h2>Staff dashboard</h2>
+ <p class="lead">Sign in to publish news, manage projects, and review messages sent through the contact form.</p>
+ <a class="btn" href="admin.html">Staff login</a>
 </div></section>
 </main>
 

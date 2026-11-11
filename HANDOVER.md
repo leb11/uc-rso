@@ -57,8 +57,9 @@ You only need **VS Code** and the project folder. Never edit files you do not re
 
 ---
 ## Part 3: IT office notes
-- Needs **Node.js 18+**. No other packages. Start with `npm start`, or run it as a service (PM2 or a Windows service) so it restarts after a reboot.
+- Needs **Node.js 20+**. Start with `npm start`, or run it as a service (PM2 or a Windows service) so it restarts after a reboot.
 - Set `ADMIN_PASSWORD` in `.env`. Put the site behind **HTTPS** (nginx, IIS, or similar). Set `PORT` if 3000 is taken.
+- To send staff replies from the site, ask UC IT for an approved SMTP relay or office-mailbox app password and set `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASSWORD`, and `MAIL_FROM` in `.env`. Never use a visitor's email password; visitors only need to enter an email address where they can receive a reply.
 - **Back up** the `data/` folder and `public/images/uploads/` regularly. They hold the live news, projects, messages, and uploaded photos.
 - To update the site: `git pull`, then restart the server. Live content is not stored in git, so updates never erase news or messages.
 - Staff share one password. Separate logins and email notifications for new messages can be added later.

@@ -46,6 +46,11 @@ input,select,textarea{font:inherit;color:var(--tx);background:var(--card);border
 input:focus,select:focus,textarea:focus{outline:3px solid var(--gold);border-color:var(--g2)}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .note{font-size:14px;color:var(--mu)}
+.staff-area{background:var(--g);color:#fff}
+.staff-area .eyebrow{color:var(--gold)}
+.staff-area .lead{color:rgba(255,255,255,.84);margin-bottom:22px}
+.staff-area .btn{min-width:180px;text-align:center;padding:15px 26px;font-size:18px;box-shadow:0 3px 0 color-mix(in srgb,var(--gold) 55%,#000)}
+.staff-area .btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .bars{display:grid;gap:10px;margin-top:14px}
 .row{display:grid;grid-template-columns:110px 1fr 28px;gap:10px;align-items:center;font-size:14px}
 .row i{display:block;height:14px;border-radius:7px;background:var(--g2)}
@@ -66,6 +71,18 @@ video{width:100%;max-width:860px;border-radius:14px;background:#000;display:bloc
  .hero{padding:44px 0 62px}section{padding:44px 0}
 }
 .msg{border-top:1px solid var(--ln);padding:12px 0}.msg:first-child{border:0}.login{max-width:420px;margin:60px auto}.err{color:#b3261e;font-size:14px}
+.project-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.project-row>b{flex:1 1 160px}
+.project-status{display:flex;align-items:center;gap:8px;font-size:14px}
+.project-status select{width:auto;min-width:132px;padding:7px 9px}
+.project-row .del{margin-left:auto}
+.inbox-message{border-top:1px solid var(--ln);padding:20px 0}.inbox-message:first-child{border-top:0}
+.inbox-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.inbox-header>div{display:grid;gap:2px}.inbox-header a,.inbox-header time,.sent-reply time{font-size:14px;color:var(--mu)}
+.inbox-body{font-size:17px;line-height:1.75;white-space:pre-wrap;overflow-wrap:anywhere;margin:12px 0 18px}
+.sent-reply{border-left:3px solid var(--g2);padding:10px 14px;margin:12px 0;background:color-mix(in srgb,var(--g2) 7%,var(--card))}
+.sent-reply p{white-space:pre-wrap;overflow-wrap:anywhere;margin:6px 0 0}
+.reply-form{max-width:760px;margin-top:16px}.form-hint{font-weight:400;color:var(--mu);font-size:13px}
 .btn.s{background:var(--g2);color:#fff}
 .brand .logo{height:46px;width:auto;background:#fff;border-radius:12px;padding:3px}
 .flogo{height:70px;width:auto;background:#fff;border-radius:14px;padding:5px;margin-bottom:12px}

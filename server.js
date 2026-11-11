@@ -1,9 +1,15 @@
 // UC-RSO website server. No packages needed: run `node server.js`.
-const http = require('http'), fs = require('fs'), path = require('path'), crypto = require('crypto');
+const http = require('http'), fs = require('fs'), path = require('path'), crypto = require('crypto'), nodemailer = require('nodemailer');
 // Settings can live in a file named .env (see .env.example), so no terminal tricks are needed.
 try { fs.readFileSync(path.join(__dirname, '.env'), 'utf8').split(/\r?\n/).forEach(l => { const m = /^\s*([A-Z_]+)\s*=\s*(.*?)\s*$/.exec(l); if (m && !l.trim().startsWith('#') && !(m[1] in process.env)) process.env[m[1]] = m[2].replace(/^["']|["']$/g, ''); }); } catch {}
 const PORT = process.env.PORT || 3000;
 const PASS = process.env.ADMIN_PASSWORD || 'change-me';
+const SMTP_HOST = process.env.SMTP_HOST || '';
+const SMTP_PORT = Number(process.env.SMTP_PORT || 587);
+const SMTP_SECURE = process.env.SMTP_SECURE === 'true';
+const SMTP_USER = process.env.SMTP_USER || '';
+const SMTP_PASSWORD = process.env.SMTP_PASSWORD || '';
+const MAIL_FROM = process.env.MAIL_FROM || SMTP_USER;
 const PUB = path.join(__dirname, 'public');
 const DATA = path.join(__dirname, 'data');   // live content: news, projects, messages (not stored in git)
 const F = { news: path.join(DATA, 'news.json'), projects: path.join(DATA, 'projects.json'), messages: path.join(DATA, 'messages.json') };
@@ -41,6 +47,28 @@ async function api(req, res, url) {
       const all = read(F.messages); all.unshift({ id: crypto.randomBytes(6).toString('hex'), name, email, subject: clean(b.subject, 120), msg, at: new Date().toISOString() });
       write(F.messages, all.slice(0, 2000)); return json(res, 200, { ok: true });
     }
+    if (kind === 'messages' && m === 'POST' && id) {
+      if (!authed(req)) return json(res, 401, { error: 'Log in first.' });
+      const b = await body(req), replyText = clean(b.reply, 5000), all = read(F.messages), message = all.find(x => x.id === id);
+      if (!message) return json(res, 404, { error: 'Message not found.' });
+      if (!replyText) return json(res, 400, { error: 'Write a reply before sending.' });
+      if (!SMTP_HOST || !SMTP_USER || !SMTP_PASSWORD || !MAIL_FROM) return json(res, 503, { error: 'Email sending is not configured. Ask the website administrator to set up the office email account.' });
+      const transporter = nodemailer.createTransport({ host: SMTP_HOST, port: SMTP_PORT, secure: SMTP_SECURE, auth: { user: SMTP_USER, pass: SMTP_PASSWORD } });
+      try {
+        await transporter.sendMail({
+          from: MAIL_FROM,
+          to: message.email,
+          subject: 'Reply from the UC Research Services Office',
+          text: `Dear ${message.name},\n\n${replyText}\n\nRegards,\nUC Research Services Office`
+        });
+      } catch {
+        return json(res, 502, { error: 'The email could not be sent. Check the office email settings and try again.' });
+      }
+      const sentReply = { text: replyText, at: new Date().toISOString() };
+      message.replies = Array.isArray(message.replies) ? message.replies : [];
+      message.replies.push(sentReply); write(F.messages, all);
+      return json(res, 200, { ok: true, reply: sentReply });
+    }
     if (kind === 'messages' && m === 'GET') return authed(req) ? json(res, 200, read(F.messages)) : json(res, 401, { error: 'Log in first.' });
     if (kind === 'news' || kind === 'projects') {
       if (m === 'GET') return json(res, 200, read(F[kind]));
@@ -51,6 +79,12 @@ async function api(req, res, url) {
         const k = kind === 'news' ? (['Hosted', 'Attended', 'Participated'].includes(b.k) ? b.k : 'Hosted') : (b.k === 'Completed' ? 'Completed' : 'Ongoing');
         const item = { id: crypto.randomBytes(6).toString('hex'), img: saveImage(b.image), t, k, d: clean(b.d, 20), s };
         all.unshift(item); write(F[kind], all); return json(res, 200, item);
+      }
+      if (m === 'PATCH' && kind === 'projects') {
+        const b = await body(req), item = all.find(x => x.id === id);
+        if (!item) return json(res, 404, { error: 'Project not found.' });
+        if (!['Ongoing', 'Completed'].includes(b.k)) return json(res, 400, { error: 'Choose Ongoing or Completed.' });
+        item.k = b.k; write(F.projects, all); return json(res, 200, item);
       }
       if (m === 'DELETE') {
         const gone = all.find(x => x.id === id);

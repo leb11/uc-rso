@@ -5,9 +5,9 @@ Website of the University of the Cordilleras Research Services Office: projects,
 **New to this project? Read [HANDOVER.md](HANDOVER.md) first.** It explains everything in plain language.
 
 ## Quick start
-1. Install Node.js 18+ (LTS) from https://nodejs.org
+1. Install Node.js 20+ (LTS) from https://nodejs.org
 2. Open this folder in VS Code.
-3. Copy `.env.example` to a new file named `.env` and set `ADMIN_PASSWORD`.
+3. Copy `.env.example` to a new file named `.env` and set `ADMIN_PASSWORD`. Ask UC IT to provide approved SMTP settings before enabling email replies.
 4. In the VS Code terminal run `npm start` (or press F5).
 5. Open http://localhost:3000. Staff page: http://localhost:3000/admin.html
 

@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "🧭",
+    "title": "Research consultation",
+    "text": "Methodological guidance and literature review."
+  },
+  {
+    "icon": "🗺️",
+    "title": "GIS services",
+    "text": "Spatial analysis, GIS equipment, and GIS tools."
+  },
+  {
+    "icon": "🎓",
+    "title": "Capacity building",
+    "text": "Workshops, whitepapers, and skills enrichment."
+  },
+  {
+    "icon": "📊",
+    "title": "Statistical consulting",
+    "text": "Statistical tools, research design, and validation."
+  },
+  {
+    "icon": "📝",
+    "title": "Proposal review",
+    "text": "Technical refinement so proposals are funding-ready."
+  },
+  {
+    "icon": "💡",
+    "title": "Research support",
+    "text": "Publication and presentation subsidies for faculty, students, and staff."
+  }
+]
