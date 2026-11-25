@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run the UC-RSO website",
+      "name": "Run the UC-IRPA website",
       "type": "node",
       "request": "launch",
       "program": "${workspaceFolder}/server.js"

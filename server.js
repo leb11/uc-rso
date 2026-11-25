@@ -1,9 +1,9 @@
-// UC-RSO website server. No packages needed: run `node server.js`.
+// UC-IRPA (formerly UC-RSO) website server. Run with `npm start` or `node server.js`.
 const http = require('http'), fs = require('fs'), path = require('path'), crypto = require('crypto'), nodemailer = require('nodemailer');
 // Settings can live in a file named .env (see .env.example), so no terminal tricks are needed.
 try { fs.readFileSync(path.join(__dirname, '.env'), 'utf8').split(/\r?\n/).forEach(l => { const m = /^\s*([A-Z_]+)\s*=\s*(.*?)\s*$/.exec(l); if (m && !l.trim().startsWith('#') && !(m[1] in process.env)) process.env[m[1]] = m[2].replace(/^["']|["']$/g, ''); }); } catch {}
 const PORT = process.env.PORT || 3000;
-const PASS = process.env.ADMIN_PASSWORD || 'change-me';
+const PASS = process.env.ADMIN_PASSWORD || 'uc-irpa-2026';
 const SMTP_HOST = process.env.SMTP_HOST || '';
 const SMTP_PORT = Number(process.env.SMTP_PORT || 587);
 const SMTP_SECURE = process.env.SMTP_SECURE === 'true';
@@ -58,8 +58,8 @@ async function api(req, res, url) {
         await transporter.sendMail({
           from: MAIL_FROM,
           to: message.email,
-          subject: 'Reply from the UC Research Services Office',
-          text: `Dear ${message.name},\n\n${replyText}\n\nRegards,\nUC Research Services Office`
+          subject: 'Reply from UC-IRPA (Institutional Research, Planning and Analytics)',
+          text: `Dear ${message.name},\n\n${replyText}\n\nRegards,\nUC-IRPA — Institutional Research, Planning and Analytics\n(Formerly UC – Research Services Office)`
         });
       } catch {
         return json(res, 502, { error: 'The email could not be sent. Check the office email settings and try again.' });
@@ -124,6 +124,6 @@ function serve(req, res, url) {
   });
 }
 http.createServer((req, res) => { const url = req.url; url.startsWith('/api/') ? api(req, res, url) : serve(req, res, url); }).listen(PORT, () => {
-  console.log(`UC-RSO website running at http://localhost:${PORT}`);
+  console.log(`UC-IRPA website running at http://localhost:${PORT}`);
   if (PASS === 'change-me') console.log('WARNING: using the default staff password. Set ADMIN_PASSWORD before going live.');
 });

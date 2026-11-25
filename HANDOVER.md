@@ -1,9 +1,9 @@
-# UC-RSO Website: Handover Guide
+# UC-IRPA Website: Handover Guide
 
 This guide is written for people who are **not programmers**. Part 1 is for every staff member, Part 2 is for the website maintainer, and Part 3 is for the IT office.
 
 ## What is this website?
-A website for UC-RSO that shows our projects, news and events, partners, photos, and a video. Visitors can send us a message. Staff can post updates themselves without touching any code.
+A website for **UC-IRPA (Institutional Research, Planning and Analytics)** — formerly known as **UC – Research Services Office (RSO)** — that shows our projects, news and events, partners, photos, and a video. Visitors can send us a message. Staff can post updates themselves without touching any code.
 
 ## Who does what
 | Role | Who | What they do |

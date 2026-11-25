@@ -1,41 +1,119 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="icon" type="image/png" href="images/favicon.png"><title>Staff area · UC-RSO</title><meta name="robots" content="noindex">
-<link rel="stylesheet" href="css/style.css"></head>
-<body>
-<header><div class="wrap bar"><a class="brand" href="index.html"><img class="logo" src="images/logo.png" alt="University of the Cordilleras logo"><span>UC-RSO staff</span></a><a href="index.html" style="color:#fff">Back to website</a></div></header>
-<main class="wrap">
- <div id="login" class="login card"><h2>Staff login</h2>
-  <form id="lf"><label>Password<input type="password" id="pw" required autocomplete="current-password"></label>
-  <button class="btn" type="submit">Log in</button><p class="err" id="lerr" role="alert"></p></form></div>
- <div id="panel" hidden style="padding:30px 0 60px">
-  <h2>Staff dashboard</h2><p class="note" id="status" role="status"></p>
-  <div class="cols">
-   <div class="card"><h3>Post news or an event</h3><form id="nf">
-    <label>Title<input name="t" required></label>
-    <label>Type<select name="k"><option>Hosted</option><option>Attended</option><option>Participated</option></select></label>
-    <label>Date<input name="d" type="date"></label>
-    <label>Summary<textarea name="s" rows="3" required></textarea></label>
-    <label>Photo (optional, up to 4 MB)<input name="image" type="file" accept="image/jpeg,image/png,image/webp"></label>
-    <button class="btn" type="submit">Publish news</button></form></div>
-   <div class="card"><h3>Add a project</h3><form id="pf">
-    <label>Project name<input name="t" required></label>
-    <label>Status<select name="k"><option>Ongoing</option><option>Completed</option></select></label>
-    <label>Short description<textarea name="s" rows="3" required></textarea></label>
-    <label>Cover photo (optional, up to 4 MB)<input name="image" type="file" accept="image/jpeg,image/png,image/webp"></label>
-    <button class="btn" type="submit">Add project</button></form></div>
-  </div>
-  <div class="cols" style="margin-top:20px">
-   <div class="card"><h3>News posts</h3><div id="nl"></div></div>
-   <div class="card"><h3>Projects</h3><div id="pl"></div></div>
-  </div>
-  <div class="card" style="margin-top:20px"><h3>Partners</h3>
-   <form id="partnerForm" class="partner-add"><label>Partner name<input name="name" required maxlength="120"></label><button class="btn s" type="submit">Add partner</button></form>
-   <div id="partnerList" class="partner-admin-list"></div>
-  </div>
-  <div class="card" style="margin-top:20px"><h3>Messages from the contact form</h3><div id="inbox"></div></div>
- </div>
-</main>
-<script src="js/admin.js"></script>
-</body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <title>Staff Portal · UC-IRPA</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="images/logo.png" alt="University of the Cordilleras logo">
+        <span class="brand-text">
+          <strong>UC-IRPA Staff Portal</strong>
+          <small>Formerly UC – Research Services Office (RSO)</small>
+        </span>
+      </a>
+      <div class="admin-nav-actions">
+        <a class="nav-link-light" href="index.html">← Back to Website</a>
+        <button id="logoutBtn" class="btn-logout" type="button" hidden>Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap admin-main">
+    <div id="login" class="login card">
+      <div class="eyebrow">UC-IRPA Internal</div>
+      <h2>Staff Login</h2>
+      <p class="note">Sign in with the office password to manage news, projects, partners, and visitor messages.</p>
+      <form id="lf">
+        <label>Password<input type="password" id="pw" required autocomplete="current-password" placeholder="Enter staff password"></label>
+        <button class="btn primary full" type="submit">Log in</button>
+        <p class="err" id="lerr" role="alert"></p>
+      </form>
+    </div>
+
+    <div id="panel" hidden class="admin-panel">
+      <div class="admin-header">
+        <div>
+          <div class="eyebrow">Content Management</div>
+          <h2>UC-IRPA Staff Dashboard</h2>
+        </div>
+        <p class="status-pill" id="status" role="status"></p>
+      </div>
+
+      <div class="cols">
+        <div class="card">
+          <h3>Post news or an event</h3>
+          <form id="nf">
+            <label>Title<input name="t" required placeholder="Headline of the news or event"></label>
+            <div class="field-row">
+              <label>Type
+                <select name="k">
+                  <option>Hosted</option>
+                  <option>Attended</option>
+                  <option>Participated</option>
+                </select>
+              </label>
+              <label>Date<input name="d" type="date"></label>
+            </div>
+            <label>Summary<textarea name="s" rows="3" required placeholder="Write 2–3 sentences describing the event..."></textarea></label>
+            <label>Photo <span class="opt">(optional, up to 4 MB)</span><input name="image" type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <button class="btn primary" type="submit">Publish news</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>Add a project</h3>
+          <form id="pf">
+            <label>Project name<input name="t" required placeholder="Name of the research project"></label>
+            <label>Status
+              <select name="k">
+                <option>Ongoing</option>
+                <option>Completed</option>
+              </select>
+            </label>
+            <label>Short description<textarea name="s" rows="3" required placeholder="Briefly summarize the project goals and impact..."></textarea></label>
+            <label>Cover photo <span class="opt">(optional, up to 4 MB)</span><input name="image" type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <button class="btn primary" type="submit">Add project</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="cols admin-section">
+        <div class="card">
+          <h3>Published news</h3>
+          <div id="nl"></div>
+        </div>
+        <div class="card">
+          <h3>Projects</h3>
+          <div id="pl"></div>
+        </div>
+      </div>
+
+      <div class="card admin-section">
+        <h3>Partner institutions</h3>
+        <form id="partnerForm" class="partner-add">
+          <label>Partner name<input name="name" required maxlength="120" placeholder="e.g. Department of Science and Technology"></label>
+          <button class="btn secondary" type="submit">Add partner</button>
+        </form>
+        <div id="partnerList" class="partner-admin-list"></div>
+      </div>
+
+      <div class="card admin-section">
+        <h3>Messages from the contact form</h3>
+        <div id="inbox"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

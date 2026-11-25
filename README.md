@@ -1,6 +1,6 @@
-# UC-RSO Website
+# UC-IRPA Website
 
-Website of the University of the Cordilleras Research Services Office: projects, news, partners, gallery, video, contact form, and a staff page for posting updates.
+Website of the University of the Cordilleras **Institutional Research, Planning and Analytics (UC-IRPA)** — formerly known as the **UC – Research Services Office (RSO)**: projects, news, partners, gallery, video, contact form, and a staff page for posting updates.
 
 **New to this project? Read [HANDOVER.md](HANDOVER.md) first.** It explains everything in plain language.
 

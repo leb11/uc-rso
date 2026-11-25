@@ -1,7 +1,7 @@
 {
 	"name": "uc-rso-website",
 	"version": "1.0.0",
-	"description": "UC Research Services Office website",
+	"description": "UC-IRPA (Institutional Research, Planning and Analytics — formerly UC Research Services Office) website",
 	"scripts": {
 		"start": "node server.js"
 	},

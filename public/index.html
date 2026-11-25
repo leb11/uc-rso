@@ -1,93 +1,286 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>UC-RSO · Research Services Office</title>
-<link rel="icon" type="image/png" href="images/favicon.png">
-<link rel="stylesheet" href="css/style.css"></head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>UC-IRPA · Institutional Research, Planning and Analytics</title>
+  <meta name="description" content="University of the Cordilleras — Institutional Research, Planning and Analytics (UC-IRPA), formerly known as UC – Research Services Office (RSO).">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-<header><div class="wrap bar">
- <a class="brand" href="#home"><img class="logo" src="images/logo.png" alt="University of the Cordilleras logo"><span>UC-RSO</span></a>
- <button id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
- <nav id="nav" aria-label="Main">
-  <a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#news">News</a><a href="#gallery">Gallery</a><a href="#partners">Partners</a><a href="#contact">Contact</a><a href="#dashboard">Staff login</a>
- </nav></div></header>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#home">
+        <img class="logo" src="images/logo.png" alt="University of the Cordilleras logo">
+        <span class="brand-text">
+          <strong>UC-IRPA</strong>
+          <small>Institutional Research, Planning &amp; Analytics</small>
+        </span>
+      </a>
+      <button id="menu" class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation">
+        <span>Menu</span>
+      </button>
+      <nav id="nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#news">News</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="admin.html">Staff Login</a>
+      </nav>
+    </div>
+  </header>
 
-<main id="home">
-<div class="hero"><div class="wrap">
- <div class="eyebrow" style="color:var(--gold)">University of the Cordilleras · Research Services Office</div>
- <h1 data-site="heroTitle">Turning research into safer, stronger communities.</h1>
- <p data-site="heroText">We help faculty, students, and partners plan, fund, analyze, and share research, from the first idea to published results.</p>
- <a class="btn" href="#contact">Talk to us</a><a class="btn o" href="#projects">See our projects</a>
-</div></div>
-<div class="wrap stats" aria-label="At a glance">
- <div class="stat"><b id="s1">0</b><span>Ongoing projects</span></div>
- <div class="stat"><b id="s2">0</b><span>Completed projects</span></div>
- <div class="stat"><b id="s3">0</b><span>News and events</span></div>
- <div class="stat"><b id="s4">0</b><span>Partners</span></div>
-</div>
+  <main id="home">
+    <div class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-badges">
+          <span class="badge-uc">University of the Cordilleras</span>
+          <span class="badge-former">Formerly known as UC – Research Services Office (RSO)</span>
+        </div>
+        <h1 data-site="heroTitle">Turning research into safer, stronger communities.</h1>
+        <p class="hero-lead" data-site="heroText">We help faculty, students, and partners plan, fund, analyze, and share research, from the first idea to published results.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Talk to us</a>
+          <a class="btn ghost" href="#projects">Explore projects</a>
+        </div>
+      </div>
+    </div>
 
-<section id="about"><div class="wrap cols">
- <div><div class="eyebrow">About us</div><h2>Research with a purpose</h2>
- <p class="lead" style="margin:0">UC-RSO supports research that protects lives, water, health, and livelihoods in the Cordillera. We guide researchers, run GIS and statistical work, and connect projects with funding and partners.</p></div>
- <div class="card"><h3>What guides us</h3><p>Useful research. Community safety. Open collaboration. Capacity building for every UCian researcher.</p></div>
-</div></section>
+    <div class="wrap stats-wrap">
+      <div class="stats" aria-label="At a glance">
+        <div class="stat"><b id="s1">0</b><span>Ongoing Projects</span></div>
+        <div class="stat"><b id="s2">0</b><span>Completed Projects</span></div>
+        <div class="stat"><b id="s3">0</b><span>News &amp; Events</span></div>
+        <div class="stat"><b id="s4">0</b><span>Partner Institutions</span></div>
+      </div>
+    </div>
 
-<section id="watch"><div class="wrap"><div class="eyebrow">Watch</div><h2>UC-RSO at a glance</h2>
- <p class="lead">A one-minute look at our work, from landslide monitoring to watersheds and GIS research.</p>
- <video controls preload="metadata" poster="images/poster.jpg" src="video/teaser.mp4">Your browser can’t play this video.</video></div></section>
+    <section id="about" class="section">
+      <div class="wrap cols about-grid">
+        <div class="about-copy">
+          <div class="eyebrow">About UC-IRPA</div>
+          <h2>Institutional Research, Planning and Analytics</h2>
+          <p class="formerly-callout"><strong>UC-IRPA</strong> is formerly known as <strong>UC – Research Services Office (RSO)</strong>.</p>
+          <p class="lead">We support evidence-based planning and impactful research that protects lives, water, health, and livelihoods across the Cordillera. Our office guides researchers, delivers GIS and statistical analytics, and connects initiatives with funding and institutional partners.</p>
+        </div>
+        <div class="card pillars-card">
+          <h3>What guides our work</h3>
+          <ul class="pillars">
+            <li>
+              <span class="pillar-dot" aria-hidden="true"></span>
+              <div><strong>Useful Research</strong><p>Practical studies aligned with institutional planning and regional needs.</p></div>
+            </li>
+            <li>
+              <span class="pillar-dot" aria-hidden="true"></span>
+              <div><strong>Community Safety</strong><p>Data-driven solutions for disaster resilience, health, and water security.</p></div>
+            </li>
+            <li>
+              <span class="pillar-dot" aria-hidden="true"></span>
+              <div><strong>Open Collaboration</strong><p>Strong partnerships across universities, LGUs, and national agencies.</p></div>
+            </li>
+            <li>
+              <span class="pillar-dot" aria-hidden="true"></span>
+              <div><strong>Capacity Building</strong><p>Mentoring, tools, and analytics support for every UCian researcher.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<section id="services" class="alt"><div class="wrap">
- <div class="eyebrow">Services</div><h2>How we can help</h2><p class="lead">Six services, one office. Not sure which you need? Send us a message.</p>
- <div class="grid" id="svc"></div>
-</div></section>
+    <section id="watch" class="section alt">
+      <div class="wrap">
+        <div class="section-head center">
+          <div class="eyebrow">Watch</div>
+          <h2>UC-IRPA at a glance</h2>
+          <p class="lead">A one-minute look at our fieldwork and analytics—from landslide monitoring to watersheds and GIS research.</p>
+        </div>
+        <div class="video-frame">
+          <video controls preload="metadata" poster="images/poster.jpg" src="video/teaser.mp4">Your browser can’t play this video.</video>
+        </div>
+      </div>
+    </section>
 
-<section id="projects"><div class="wrap">
- <div class="eyebrow">Projects</div><h2>What we are working on</h2>
- <div class="tabs" role="group" aria-label="Filter projects">
-  <button class="tab" data-f="all" aria-pressed="true">All</button><button class="tab" data-f="Ongoing" aria-pressed="false">Ongoing</button><button class="tab" data-f="Completed" aria-pressed="false">Completed</button>
- </div>
- <div class="grid" id="proj"></div>
-</div></section>
+    <section id="services" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Services</div>
+          <h2>How we can help</h2>
+          <p class="lead">Six core services, one office. Not sure which one fits your research or planning need? Send us a message.</p>
+        </div>
+        <div class="grid services-grid" id="svc"></div>
+      </div>
+    </section>
 
-<section id="news" class="alt"><div class="wrap">
- <div class="eyebrow">News and events</div><h2>What’s happening</h2><p class="lead">Events we hosted, attended, or took part in.</p>
- <div class="grid" id="newsList"></div>
-</div></section>
+    <section id="projects" class="section alt">
+      <div class="wrap">
+        <div class="section-head split">
+          <div>
+            <div class="eyebrow">Projects</div>
+            <h2>What we are working on</h2>
+          </div>
+          <div class="tabs" role="group" aria-label="Filter projects">
+            <button class="tab" data-f="all" aria-pressed="true">All</button>
+            <button class="tab" data-f="Ongoing" aria-pressed="false">Ongoing</button>
+            <button class="tab" data-f="Completed" aria-pressed="false">Completed</button>
+          </div>
+        </div>
+        <div class="grid media-grid" id="proj"></div>
+      </div>
+    </section>
 
-<section id="gallery"><div class="wrap">
- <div class="eyebrow">Gallery</div><h2>In the field</h2><p class="lead">Moments from our fieldwork and project visits.</p>
- <div class="gal" id="gal"></div></div></section>
+    <section id="news" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">News &amp; Events</div>
+          <h2>What’s happening</h2>
+          <p class="lead">Highlights from events we hosted, attended, or participated in.</p>
+        </div>
+        <div class="grid media-grid" id="newsList"></div>
+      </div>
+    </section>
 
-<section id="partners"><div class="wrap">
- <div class="eyebrow">Partners</div><h2>Who we work with</h2><p class="lead">Research is stronger together.</p>
- <div class="partners" id="part"></div>
-</div></section>
+    <section id="gallery" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Gallery</div>
+          <h2>In the field</h2>
+          <p class="lead">Moments from our fieldwork, conferences, and project visits. Click any photo or video to view and swipe through.</p>
+        </div>
+        <div class="gal" id="gal"></div>
+      </div>
+    </section>
 
-<section id="contact" class="alt"><div class="wrap cols">
- <div><div class="eyebrow">Contact us</div><h2>Send us a message</h2>
- <form id="cf" novalidate>
-  <label>Full name<input name="name" required autocomplete="name"></label>
-  <label>Email<input name="email" type="email" required autocomplete="email"><small class="form-hint">Enter an address where we can reply. You do not need to sign in.</small></label>
-  <label>I need help with<select name="subject"><option>Research consultation</option><option>GIS services</option><option>Statistical consulting</option><option>Proposal review</option><option>Research subsidy</option><option>Other</option></select></label>
-  <label>Message<textarea name="msg" rows="4" required></textarea></label>
-  <button class="btn" type="submit">Send message</button><p class="note" id="cmsg" role="status"></p>
- </form></div>
- <div class="card"><h3>Visit or call</h3>
-  <p><b>Phone</b><br><span data-site="phone">+63 74 442 3316, local 195 or 136</span></p><br>
-  <p><b>Email</b><br><a data-site="email" data-mail href="mailto:rso@uc-bcf.edu.ph">rso@uc-bcf.edu.ph</a></p><br>
-  <p><b>Main office</b><br><span data-site="office">Room S314, University of the Cordilleras Main</span></p><br>
-  <p><b>GIS Innovation Laboratory</b><br><span data-site="lab">L22, UC Legarda Office</span></p></div>
-</div></section>
+    <section id="partners" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Partners</div>
+          <h2>Who we work with</h2>
+          <p class="lead">Research and institutional planning are stronger together.</p>
+        </div>
+        <div class="partners" id="part"></div>
+      </div>
+    </section>
 
-<section id="dashboard" class="staff-area"><div class="wrap">
- <div class="eyebrow">Staff access</div><h2>Staff dashboard</h2>
- <p class="lead">Sign in to publish news, manage projects, and review messages sent through the contact form.</p>
- <a class="btn" href="admin.html">Staff login</a>
-</div></section>
-</main>
+    <section id="contact" class="section alt">
+      <div class="wrap cols contact-grid">
+        <div class="card form-card">
+          <div class="eyebrow">Contact Us</div>
+          <h2>Send us a message</h2>
+          <p class="lead compact">Have a question about research consultation, GIS, or analytics? Reach out below.</p>
+          <form id="cf" novalidate>
+            <div class="field-row">
+              <label>Full name<input name="name" required autocomplete="name" placeholder="Juan Dela Cruz"></label>
+              <label>Email<input name="email" type="email" required autocomplete="email" placeholder="you@uc-bcf.edu.ph"><small class="form-hint">Enter an address where we can reply. No sign-in required.</small></label>
+            </div>
+            <label>I need help with
+              <select name="subject">
+                <option>Research consultation</option>
+                <option>GIS services</option>
+                <option>Statistical consulting</option>
+                <option>Proposal review</option>
+                <option>Research subsidy</option>
+                <option>Institutional planning &amp; analytics</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>Message<textarea name="msg" rows="4" required placeholder="Tell us a bit about your project or inquiry..."></textarea></label>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send message</button>
+              <p class="note" id="cmsg" role="status"></p>
+            </div>
+          </form>
+        </div>
+        <aside class="contact-panel">
+          <div class="eyebrow gold">Visit or Call</div>
+          <h3>UC-IRPA Office</h3>
+          <p class="panel-sub">Institutional Research, Planning and Analytics<br><span>Formerly known as UC – Research Services Office (RSO)</span></p>
+          <dl class="contact-list">
+            <div>
+              <dt>Phone</dt>
+              <dd><span data-site="phone">+63 74 442 3316, local 195 or 136</span></dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a data-site="email" data-mail href="mailto:rso@uc-bcf.edu.ph">rso@uc-bcf.edu.ph</a></dd>
+            </div>
+            <div>
+              <dt>Main Office</dt>
+              <dd><span data-site="office">Room S314, University of the Cordilleras Main</span></dd>
+            </div>
+            <div>
+              <dt>GIS Innovation Laboratory</dt>
+              <dd><span data-site="lab">L22, UC Legarda Office</span></dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
 
-<footer><div class="wrap"><img class="flogo" src="images/logo.png" alt="">© University of the Cordilleras · Research Services Office<br><span data-site="address">Governor Pack Rd, Baguio City</span></div></footer>
-<div class="fab"><button id="up" aria-label="Back to top">↑</button><button id="dn" aria-label="Go to bottom">↓</button></div>
+    <section id="dashboard" class="staff-area">
+      <div class="wrap staff-inner">
+        <div>
+          <div class="eyebrow gold">Staff Access</div>
+          <h2>UC-IRPA Staff Dashboard</h2>
+          <p class="lead">Sign in to publish news, update project status, manage partners, and reply to contact form inquiries.</p>
+        </div>
+        <a class="btn primary" href="admin.html">Open Staff Login</a>
+      </div>
+    </section>
+  </main>
 
-<script src="js/main.js"></script>
-</body></html>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img class="flogo" src="images/logo.png" alt="University of the Cordilleras logo">
+        <div>
+          <strong>UC-IRPA · Institutional Research, Planning and Analytics</strong>
+          <p class="footer-former">Formerly known as UC – Research Services Office (RSO)</p>
+          <p class="footer-addr">University of the Cordilleras · <span data-site="address">Governor Pack Rd, Baguio City</span></p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="admin.html">Staff Login</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© University of the Cordilleras · Institutional Research, Planning and Analytics (UC-IRPA)</span>
+    </div>
+  </footer>
+
+  <div class="fab" aria-label="Quick scroll">
+    <button id="up" aria-label="Back to top" title="Back to top">↑</button>
+    <button id="dn" aria-label="Go to bottom" title="Go to bottom">↓</button>
+  </div>
+
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Gallery media viewer">
+    <button id="lbClose" class="lb-close" aria-label="Close viewer">×</button>
+    <button id="lbPrev" class="lb-nav lb-prev" aria-label="Previous item">‹</button>
+    <figure class="lb-figure">
+      <div class="lb-stage">
+        <img id="lbImg" src="" alt="" hidden>
+        <video id="lbVid" controls playsinline preload="metadata" hidden>Your browser can’t play this video.</video>
+      </div>
+      <figcaption class="lb-meta">
+        <span id="lbCap"></span>
+        <span id="lbCount" class="lb-count"></span>
+      </figcaption>
+    </figure>
+    <button id="lbNext" class="lb-nav lb-next" aria-label="Next item">›</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
