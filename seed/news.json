@@ -1,5 +1,21 @@
 [
   {
+    "id": "digihaz2",
+    "img": "images/news_digihaz_2nd.jpg",
+    "t": "2nd UC-DIGIHAZ Networking Event: Quadruple-Helix Research Matchmaking Forum",
+    "k": "Hosted",
+    "d": "2026-04",
+    "s": "UC hosted the 2nd UC-DIGIHAZ National Networking Event — Quadruple-Helix Research Matchmaking Forum: Digital Solutions for Natural Hazard Resilience, gathering in-person and online partners to advance collaboration through digital innovation for disaster resilience."
+  },
+  {
+    "id": "digihaz1",
+    "img": "images/news_digihaz_1st.jpg",
+    "t": "1st UC-DIGIHAZ Networking Event: Quadruple-Helix Research Matchmaking Forum",
+    "k": "Hosted",
+    "d": "2025-11-14",
+    "s": "UC hosted the 1st UC-DIGIHAZ Networking Event under the theme \"Advancing collaboration through digital innovation for disaster resilience,\" connecting academic, government, industry, and community stakeholders for natural hazard resilience."
+  },
+  {
     "id": "n1",
     "img": "images/news_calamit.jpg",
     "t": "CALAMI-T team in the field",
