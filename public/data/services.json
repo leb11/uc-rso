@@ -1,32 +1,218 @@
 [
   {
-    "icon": "🧭",
+    "slug": "research-consultation",
+    "icon": "compass",
     "title": "Research consultation",
-    "text": "Methodological guidance and literature review."
+    "text": "Methodological guidance and literature review.",
+    "contactSubject": "Research consultation",
+    "overview": "Our Research Consultation service provides one-on-one methodological and technical guidance for UC faculty, students, and partner researchers—from initial topic framing and literature synthesis to research design, instrument alignment, and ethics readiness.",
+    "benefits": [
+      "Clearer research questions and aligned study methodology",
+      "Faster, more structured literature review and synthesis",
+      "Fewer revisions during proposal, defense, and review stages",
+      "Direct guidance from experienced UC-IRPA researchers"
+    ],
+    "components": [
+      {
+        "icon": "users",
+        "title": "Mentoring & Framing",
+        "text": "Refine research problems, objectives, and scope with dedicated advisory sessions."
+      },
+      {
+        "icon": "book",
+        "title": "Literature Review",
+        "text": "Guidance on academic databases, search strategies, and thematic synthesis."
+      },
+      {
+        "icon": "compass",
+        "title": "Methodology Design",
+        "text": "Select appropriate qualitative, quantitative, or mixed-methods frameworks."
+      },
+      {
+        "icon": "clipboard",
+        "title": "Instrument Alignment",
+        "text": "Align survey items, interview guides, and indicators with study objectives."
+      }
+    ]
   },
   {
-    "icon": "🗺️",
+    "slug": "gis-services",
+    "icon": "map",
     "title": "GIS services",
-    "text": "Spatial analysis, GIS equipment, and GIS tools."
+    "text": "Spatial analysis, GIS equipment, and GIS tools.",
+    "contactSubject": "GIS services",
+    "overview": "Powered by UC-IRPA's GIS Innovation Laboratory, our GIS Services deliver end-to-end geospatial mapping, spatial modeling, and specialized field equipment support for hazard, watershed, health, and urban planning studies across the Cordillera.",
+    "benefits": [
+      "Access to specialized GIS hardware, software, and lab facilities",
+      "High-accuracy hazard, land-use, and environmental mapping",
+      "Actionable spatial insights for LGUs, agencies, and planners",
+      "Hands-on technical assistance from UC-IRPA GIS specialists"
+    ],
+    "components": [
+      {
+        "icon": "map",
+        "title": "Spatial Analysis",
+        "text": "Hotspot detection, suitability modeling, watershed delineation, and terrain mapping."
+      },
+      {
+        "icon": "layers",
+        "title": "GIS Equipment",
+        "text": "Access to GPS units, mapping tools, and lab workstations for field studies."
+      },
+      {
+        "icon": "globe",
+        "title": "Cartography & Mapping",
+        "text": "Publication-grade thematic maps and visual layers for reports and proposals."
+      },
+      {
+        "icon": "database",
+        "title": "Field Data Integration",
+        "text": "Clean, geocode, and integrate field surveys with satellite and census datasets."
+      }
+    ]
   },
   {
-    "icon": "🎓",
+    "slug": "capacity-building",
+    "icon": "graduation",
     "title": "Capacity building",
-    "text": "Workshops, whitepapers, and skills enrichment."
+    "text": "Workshops, whitepapers, and skills enrichment.",
+    "contactSubject": "Capacity building",
+    "overview": "Our Capacity Building program equips faculty, students, and institutional partners with modern research, planning, and analytics skills through structured workshops, technical mentorship, and practical knowledge resources.",
+    "benefits": [
+      "Hands-on training in research methods, GIS, and analytics tools",
+      "Practical whitepapers, guides, and institutional research templates",
+      "Stronger interdisciplinary collaboration across colleges and partners",
+      "Continuous capability growth for emerging and senior researchers"
+    ],
+    "components": [
+      {
+        "icon": "laptop",
+        "title": "Workshops",
+        "text": "Hands-on training in research writing, GIS workflows, and data analytics."
+      },
+      {
+        "icon": "users",
+        "title": "Mentorship",
+        "text": "Connect with experienced UC researchers and program leads for guidance."
+      },
+      {
+        "icon": "book",
+        "title": "Whitepapers & Guides",
+        "text": "Access curated research briefings, toolkits, and methodology references."
+      },
+      {
+        "icon": "network",
+        "title": "Networking",
+        "text": "Build connections with academic, LGU, and industry partners at forums."
+      }
+    ]
   },
   {
-    "icon": "📊",
+    "slug": "statistical-consulting",
+    "icon": "chart",
     "title": "Statistical consulting",
-    "text": "Statistical tools, research design, and validation."
+    "text": "Statistical tools, research design, and validation.",
+    "contactSubject": "Statistical consulting",
+    "overview": "Our Statistical Consulting service provides dedicated quantitative advisory covering sampling design, hypothesis testing, instrument validation, and data modeling for academic theses, institutional planning, and externally funded projects.",
+    "benefits": [
+      "Statistically sound sampling plans and experimental designs",
+      "Validated survey instruments with documented reliability checks",
+      "Accurate selection and interpretation of statistical models",
+      "Clear, publication-ready tables, diagnostics, and summaries"
+    ],
+    "components": [
+      {
+        "icon": "clipboard",
+        "title": "Research Design",
+        "text": "Determine sample sizes, power requirements, and appropriate study designs."
+      },
+      {
+        "icon": "check-circle",
+        "title": "Instrument Validation",
+        "text": "Run reliability testing, factor analysis, and pilot validation checks."
+      },
+      {
+        "icon": "chart",
+        "title": "Data Analysis",
+        "text": "Descriptive, inferential, regression, and multivariate statistical modeling."
+      },
+      {
+        "icon": "sliders",
+        "title": "Statistical Tools",
+        "text": "Guidance on software workflows, data cleaning, and assumption checking."
+      }
+    ]
   },
   {
-    "icon": "📝",
+    "slug": "proposal-review",
+    "icon": "document",
     "title": "Proposal review",
-    "text": "Technical refinement so proposals are funding-ready."
+    "text": "Technical refinement so proposals are funding-ready.",
+    "contactSubject": "Proposal review",
+    "overview": "Our Proposal Review service conducts a thorough technical and structural evaluation of research and grant proposals to ensure clarity, methodological rigor, and alignment with local, national, and international funding standards.",
+    "benefits": [
+      "Stronger alignment with funding agency priorities and rubrics",
+      "Early identification of methodological, timeline, or budget gaps",
+      "Clearer problem statements, objectives, and expected impact",
+      "Higher competitiveness for institutional and external grants"
+    ],
+    "components": [
+      {
+        "icon": "document",
+        "title": "Technical Review",
+        "text": "Detailed feedback on rationale, methodology, and logical coherence."
+      },
+      {
+        "icon": "sliders",
+        "title": "Budget & Workplan",
+        "text": "Verify line-item feasibility, deliverables, and realistic project milestones."
+      },
+      {
+        "icon": "target",
+        "title": "Funder Alignment",
+        "text": "Tailor proposals to DOST, CHED, Erasmus+, LGU, and partner requirements."
+      },
+      {
+        "icon": "check-circle",
+        "title": "Pre-Submission Polish",
+        "text": "Final compliance check on required endorsements, forms, and formatting."
+      }
+    ]
   },
   {
-    "icon": "💡",
+    "slug": "research-support",
+    "icon": "award",
     "title": "Research support",
-    "text": "Publication and presentation subsidies for faculty, students, and staff."
+    "text": "Publication and presentation subsidies for faculty, students, and staff.",
+    "contactSubject": "Research subsidy",
+    "overview": "Our Research Support service administers publication incentives, conference presentation subsidies, and endorsement assistance so UC faculty, students, and staff can share high-impact research locally and internationally.",
+    "benefits": [
+      "Financial subsidies for reputable peer-reviewed journal publications",
+      "Support for national and international conference presentations",
+      "Streamlined endorsement, processing, and documentation guidance",
+      "Greater institutional visibility for UC research and analytics outputs"
+    ],
+    "components": [
+      {
+        "icon": "award",
+        "title": "Publication Subsidies",
+        "text": "Support for article processing charges in indexed, peer-reviewed journals."
+      },
+      {
+        "icon": "globe",
+        "title": "Conference Support",
+        "text": "Assistance for accepted paper and poster presentations at scholarly forums."
+      },
+      {
+        "icon": "folder",
+        "title": "Endorsement & Filing",
+        "text": "Clear checklists and institutional endorsement for subsidy applications."
+      },
+      {
+        "icon": "network",
+        "title": "Dissemination Guidance",
+        "text": "Advice on reputable venues, open-access options, and research impact."
+      }
+    ]
   }
 ]

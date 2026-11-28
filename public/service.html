@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Service Details · UC-IRPA</title>
+  <meta name="description" content="Explore research, planning, GIS, and analytics services offered by UC-IRPA (Institutional Research, Planning and Analytics).">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <script>(function(){try{var t=localStorage.getItem('uc_irpa_theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html#home">
+        <img class="logo" src="images/logo.png" alt="University of the Cordilleras logo">
+        <span class="brand-text">
+          <strong>UC-IRPA</strong>
+          <small>Institutional Research, Planning &amp; Analytics</small>
+        </span>
+      </a>
+      <nav id="nav" aria-label="Main">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#news">News</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#partners">Partners</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="nav-cta" href="admin.html">Staff Login</a>
+      </nav>
+      <div class="header-controls">
+        <button id="themeToggle" class="theme-btn" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
+        <button id="menu" class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation">
+          <span>Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="svc-hero">
+      <div class="wrap">
+        <div class="eyebrow">UC-IRPA · Services</div>
+        <h1 id="svcTitle">Loading service...</h1>
+        <p id="svcLead" class="svc-hero-lead"></p>
+      </div>
+    </section>
+
+    <section class="svc-detail-section">
+      <div class="wrap">
+        <div class="svc-detail-grid">
+          <div class="svc-detail-left">
+            <div class="svc-block">
+              <h2 class="svc-bar-heading">Overview</h2>
+              <p id="svcOverview" class="svc-overview-text"></p>
+            </div>
+            <div class="svc-block">
+              <h2 class="svc-bar-heading">Service Benefits</h2>
+              <ul id="svcBenefits" class="benefit-list"></ul>
+            </div>
+          </div>
+
+          <div class="svc-detail-right">
+            <h2 class="svc-bar-heading">Key Components</h2>
+            <div id="svcComponents" class="comp-grid"></div>
+          </div>
+        </div>
+
+        <div class="svc-bottom-actions">
+          <a class="btn-pill-back" href="index.html#services">Back to Services</a>
+          <a id="svcContactCta" class="btn primary" href="index.html#contact">Inquire About This Service</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img class="flogo" src="images/logo.png" alt="University of the Cordilleras logo">
+        <div>
+          <strong>UC-IRPA · Institutional Research, Planning and Analytics</strong>
+          <p class="footer-former">Formerly known as UC – Research Services Office (RSO)</p>
+          <p class="footer-addr">University of the Cordilleras · <span data-site="address">Governor Pack Rd, Baguio City</span></p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#news">News</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="admin.html">Staff Login</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© University of the Cordilleras · Institutional Research, Planning and Analytics (UC-IRPA)</span>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/service.js"></script>
+</body>
+</html>

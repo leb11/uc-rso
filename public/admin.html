@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <script>(function(){try{var t=localStorage.getItem('uc_irpa_theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(e){}})();</script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="admin-body">
@@ -23,6 +24,7 @@
       </a>
       <div class="admin-nav-actions">
         <a class="nav-link-light" href="index.html">← Back to Website</a>
+        <button id="themeToggle" class="theme-btn" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
         <button id="logoutBtn" class="btn-logout" type="button" hidden>Log out</button>
       </div>
     </div>
@@ -114,6 +116,7 @@
     </div>
   </main>
 
+  <script src="js/theme.js"></script>
   <script src="js/admin.js"></script>
 </body>
 </html>

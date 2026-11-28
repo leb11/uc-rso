@@ -3,6 +3,15 @@ const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&am
 let SVC = [], PART = [], GAL = [], SITE = {};
 let projects = [], news = [], filt = 'all';
 
+const SERVICE_ICONS = {
+  compass: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polygon points="15.5,8.5 13.6,13.6 8.5,15.5 10.4,10.4"/></svg>',
+  map: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3,6 9,3 15,6 21,3 21,18 15,21 9,18 3,21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>',
+  graduation: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="2,10 12,5 22,10 12,15"/><path d="M6 12.5v4.5c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/><line x1="22" y1="10" x2="22" y2="16"/></svg>',
+  chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="20" x2="21" y2="20"/><rect x="5" y="12" width="3.5" height="8" rx="0.8"/><rect x="10.25" y="7" width="3.5" height="13" rx="0.8"/><rect x="15.5" y="4" width="3.5" height="16" rx="0.8"/></svg>',
+  document: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><polyline points="14,3 14,8 19,8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>',
+  award: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.2 7 21l5-2.5L17 21l-1.5-6.8"/></svg>'
+};
+
 async function load(url, fallback) {
   try {
     const r = await fetch(url);
@@ -25,7 +34,7 @@ function applySite(site) {
 
 function render() {
   $('#svc').innerHTML = SVC.map(x =>
-    `<div class="card service-card"><div class="ico" aria-hidden="true">${esc(x.icon)}</div><h3>${esc(x.title)}</h3><p>${esc(x.text)}</p></div>`
+    `<a class="card service-card" href="service.html?id=${esc(x.slug || '')}"><div class="ico" aria-hidden="true">${SERVICE_ICONS[x.icon] || SERVICE_ICONS.document}</div><h3>${esc(x.title)}</h3><p>${esc(x.text)}</p><span class="svc-more">Learn more <span aria-hidden="true">→</span></span></a>`
   ).join('');
 
   $('#gal').innerHTML = GAL.map((g, idx) => {
@@ -33,7 +42,7 @@ function render() {
       const thumb = g.poster
         ? `<img src="images/${esc(g.poster)}" alt="${esc(g.caption)}" loading="lazy">`
         : `<video class="gal-vid-thumb" src="video/${esc(g.video)}" muted playsinline preload="metadata"></video>`;
-      return `<figure tabindex="0" data-idx="${idx}"><div class="gal-img-wrap">${thumb}<span class="gal-vid-pill">Video</span><span class="gal-play-badge" aria-hidden="true"><span>▶</span></span></div><figcaption>${esc(g.caption)}</figcaption></figure>`;
+      return `<figure tabindex="0" data-idx="${idx}"><div class="gal-img-wrap">${thumb}<span class="gal-vid-pill">Video</span><span class="gal-play-badge" aria-hidden="true"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><polygon points="7,4 20,12 7,20"/></svg></span></span></div><figcaption>${esc(g.caption)}</figcaption></figure>`;
     }
     return `<figure tabindex="0" data-idx="${idx}"><div class="gal-img-wrap"><img src="images/${esc(g.image)}" alt="${esc(g.caption)}" loading="lazy"></div><figcaption>${esc(g.caption)}</figcaption></figure>`;
   }).join('');
@@ -197,6 +206,14 @@ $('#cf').onsubmit = async e => {
     n.textContent = 'We could not send it from the page, so your email app is opening instead.';
   }
 };
+
+const preSubject = new URLSearchParams(location.search).get('subject');
+if (preSubject) {
+  const select = $('#cf select[name="subject"]');
+  if (select && [...select.options].some(o => o.value === preSubject)) {
+    select.value = preSubject;
+  }
+}
 
 render();
 Promise.all([
